@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SpringBoot on SpringBoot Doc</title>
+    <link>https://jaswine.com/docs/boot/</link>
+    <description>Recent content in SpringBoot on SpringBoot Doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jaswine.com/docs/boot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/install/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/install/base/</guid>
+      <description> Redis安装 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/install/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/install/docker/</guid>
+      <description> 使用Docker安装Redis </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/install/yum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/install/yum/</guid>
+      <description> 使用YUM安装Redis // 1.查询是否有可以安装的包 yum list redis // 2.没有的话安装仓库 yum install epel-release // 3.安装Redis yum install redis  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/base/</guid>
+      <description> SpringBoot整合Security @SpringBoot版本 : 2.0.4.RELEASE
+应用环境 在我们开发Web应用程序的过程中，我们需要对我们的资源(URI)进行保护。我们常用的安全框架有Apache Shiro和Spring Security。Shiro我没有使用过，但是和Spring Security相比比较简单但是粒度也比较从粗。
+在SpringBoot ，Spring Cloud大行其道的当下，Java开发已经等同于Spring开发了，Spring Security属于Spring的大家族一员，和自己的大哥整合的比较好，并且人家自己做的也不错啊。
+Features 网上的教程都是很零散的Demo级别的教程，都是点级别的知识点，对于知道Spring Security详细细节的开发还好 ，如果初级入门 Spring Security的话就非常不友好，所以我想写这个Blog的时候遵循Arch-First(架构优先)的原则，先开启上帝视角来看Spring Security的运行原理，然后再深入进去修改每一个细节。
+这个Blog是生产环境下使用的，动态的权限，动态的角色，不会像很多Demo中写的那样使用@PreAuthorize(&amp;quot;hasRole(&#39;ADMIN&#39;)&amp;quot;)这样子。
+ 基于数据库的动态权限认证 RBAC权限模型 Json返回，前后端分离 SpringBoot2.0+  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/overlooking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/overlooking/</guid>
+      <description>俯瞰Spring Security @SpringBoot 版本：2.0.4.RELEASE
+@源码分析： Spring Security源代码分析
+Spring Security可以对Java Web程序提供安全授权和认证，同时还能整合Oauth2来完成SSO(单点登陆)功能，SSO是微服务框架中的基础功能，大型分布式应用网站都是一个个单独的应用，每个应用的资源都要受到保护，但是每一个系统开发一套权限的功能不能满足要求。在微服务中权限的控制本质上已经是一个单独的服务对外提供服务。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/start/</guid>
+      <description> 工程起步 @SpringBoot版本： 2.0.4.RELEASE
+默认你已经建好了SpringBoot工程。我建立的工程结构如下
+// TODO 工程架构图
+1.引入Security依赖 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-security&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  2.配置WebSecurity文件 </description>
+    </item>
+    
+  </channel>
+</rss>

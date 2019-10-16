@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Base
+  
+ | SpringBoot Doc</title>
+
+
+
+<link rel="stylesheet" href="/docs/boot/book.min.b7d5ee4f671b06dde5fd61ab409a54048ba7759e99fed39ac32a7be45d4d92cd.css">
+
+
+<link rel="icon" href="/docs/boot/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://jaswine.com/docs/boot">SpringBoot Doc</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f boot\2f docs\2fsecurity\2f base\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><a href="/docs/boot/docs/install/base/">特性</a></strong></li>
+<li><strong><a href="/docs/boot/docs/security/base/">整合Security</a></strong>
+
+<ul>
+<li><a href="/docs/boot/docs/security/overlooking/">俯瞰Security</a></li>
+<li><a href="/docs/boot/docs/security/start/">工程起步</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/docs/boot/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Base
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="springboot整合security">SpringBoot整合Security</h1>
+
+<hr />
+
+<p>@SpringBoot版本 : 2.0.4.RELEASE</p>
+
+<hr />
+
+<h2 id="应用环境">应用环境</h2>
+
+<p>在我们开发Web应用程序的过程中，我们需要对我们的资源(URI)进行保护。我们常用的安全框架有Apache Shiro和Spring Security。Shiro我没有使用过，但是和Spring Security相比比较简单但是粒度也比较从粗。</p>
+
+<p>在SpringBoot ，Spring Cloud大行其道的当下，Java开发已经等同于Spring开发了，Spring Security属于Spring的大家族一员，和自己的大哥整合的比较好，并且人家自己做的也不错啊。</p>
+
+<h2 id="features">Features</h2>
+
+<p>网上的教程都是很零散的Demo级别的教程，都是点级别的知识点，对于知道Spring Security详细细节的开发还好 ，如果初级入门 Spring Security的话就非常不友好，所以我想写这个Blog的时候遵循<code>Arch-First(架构优先)</code>的原则，先开启上帝视角来看Spring Security的运行原理，然后再深入进去修改每一个细节。</p>
+
+<p>这个Blog是生产环境下使用的，动态的权限，动态的角色，不会像很多Demo中写的那样使用<code>@PreAuthorize(&quot;hasRole('ADMIN')&quot;)</code>这样子。</p>
+
+<ul>
+<li>基于数据库的动态权限认证</li>
+<li>RBAC权限模型</li>
+<li>Json返回，前后端分离</li>
+<li>SpringBoot2.0+</li>
+</ul>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#springboot整合security">SpringBoot整合Security</a>
+<ul>
+<li><a href="#应用环境">应用环境</a></li>
+<li><a href="#features">Features</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>
