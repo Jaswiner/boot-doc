@@ -18,7 +18,27 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/authenticationdecision/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/docs/boot/docs/security/base/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/oauth2/base/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/oauth2/explain/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/oauth2/table/</loc>
     <priority>0</priority>
   </url>
   
@@ -28,7 +48,22 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/redirectjson/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/docs/boot/docs/security/start/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/success2failedhandler/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/security/userdetailsservice/</loc>
     <priority>0</priority>
   </url>
   

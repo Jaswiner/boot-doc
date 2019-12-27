@@ -12,7 +12,7 @@
 <title>
   
     
-    Docker
+    Explain
   
  | SpringBoot Doc</title>
 
@@ -50,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f boot\2f docs\2finstall\2f docker\2f "] {
+  nav ul a[href$="\2f docs\2f boot\2f docs\2fsecurity\2foauth2\2f explain\2f "] {
       color: #004ed0;
   }
   </style>
@@ -116,7 +116,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Docker
+    Explain
   
 </strong>
 </header>
@@ -124,7 +124,27 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="使用docker安装redis">使用Docker安装Redis</h1>
+<h1 id="oauth2配置-重要类说明">OAUTH2配置&amp;重要类说明</h1>
+
+<hr />
+
+<p>@springCloud版本:Finchley.SR2</p>
+
+<hr />
+
+<h2 id="配置文件说明">配置文件说明</h2>
+
+<h2 id="重要类">重要类</h2>
+
+<ul>
+<li><p><strong>TokenStore<I></strong></p>
+
+<p>Token持久化方式【<a href="https://docs.spring.io/spring-security/oauth/apidocs/org/springframework/security/oauth2/provider/token/TokenStore.html">TokenStore-DOC</a>】</p></li>
+
+<li><p><strong>AccessTokenConverter<I></strong></p>
+
+<p>对象持久化转化器【<a href="https://docs.spring.io/spring-security/oauth/apidocs/org/springframework/security/oauth2/provider/token/AccessTokenConverter.html">AccessTokenConverter- DOC</a>】</p></li>
+</ul>
 </article>
 
       
@@ -138,7 +158,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#使用docker安装redis">使用Docker安装Redis</a></li>
+<li><a href="#oauth2配置-重要类说明">OAUTH2配置&amp;重要类说明</a>
+<ul>
+<li><a href="#配置文件说明">配置文件说明</a></li>
+<li><a href="#重要类">重要类</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

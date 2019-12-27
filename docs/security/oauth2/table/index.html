@@ -12,7 +12,7 @@
 <title>
   
     
-    Docker
+    Table
   
  | SpringBoot Doc</title>
 
@@ -50,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f boot\2f docs\2finstall\2f docker\2f "] {
+  nav ul a[href$="\2f docs\2f boot\2f docs\2fsecurity\2foauth2\2ftable\2f "] {
       color: #004ed0;
   }
   </style>
@@ -116,7 +116,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Docker
+    Table
   
 </strong>
 </header>
@@ -124,7 +124,82 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="使用docker安装redis">使用Docker安装Redis</h1>
+<h1 id="oauth2中的默认数据表">OAuth2中的默认数据表</h1>
+
+<hr />
+
+<p>使用Spring Security Oauth2来实现OAuth2标准的授权中有6张默认的表,知道这些表是什么意思很好</p>
+
+<ul>
+<li>oauth_access_token</li>
+<li>oauth_approvals</li>
+<li>oauth_client_details</li>
+<li>oauth_client_token</li>
+<li>oauth_code</li>
+<li>oauth_refresh_token</li>
+</ul>
+
+<p><strong>oauth_access_token</strong></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">字段</th>
+<th align="left">作用</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">create_time</td>
+<td align="left">创建时间,插入的时候自动生成</td>
+<td align="left">扩展字段</td>
+</tr>
+
+<tr>
+<td align="left">token_id</td>
+<td align="left">access_token进行MD5加密后存储</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">token</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">authenticatication_id</td>
+<td align="left">由username,client_id,scope进行MD5加密生成</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">user_name</td>
+<td align="left">登录的时候用户名</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">client_id</td>
+<td align="left">k客户端id</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">authentication</td>
+<td align="left">Oauth2Authentication对象序列化后的数据</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">refresh_token</td>
+<td align="left">将refresh_token的值通过MD5加密后存储</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
@@ -138,7 +213,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#使用docker安装redis">使用Docker安装Redis</a></li>
+<li><a href="#oauth2中的默认数据表">OAuth2中的默认数据表</a></li>
 </ul>
 </nav>
   </aside>

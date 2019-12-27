@@ -39,6 +39,15 @@
     
     <item>
       <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/authenticationdecision/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/authenticationdecision/</guid>
+      <description> 自定义授权方式 </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/docs/boot/docs/security/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -49,6 +58,40 @@
 Features 网上的教程都是很零散的Demo级别的教程，都是点级别的知识点，对于知道Spring Security详细细节的开发还好 ，如果初级入门 Spring Security的话就非常不友好，所以我想写这个Blog的时候遵循Arch-First(架构优先)的原则，先开启上帝视角来看Spring Security的运行原理，然后再深入进去修改每一个细节。
 这个Blog是生产环境下使用的，动态的权限，动态的角色，不会像很多Demo中写的那样使用@PreAuthorize(&amp;quot;hasRole(&#39;ADMIN&#39;)&amp;quot;)这样子。
  基于数据库的动态权限认证 RBAC权限模型 Json返回，前后端分离 SpringBoot2.0+  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/oauth2/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/oauth2/base/</guid>
+      <description> OAuth2协议概念 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/oauth2/explain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/oauth2/explain/</guid>
+      <description> OAUTH2配置&amp;amp;重要类说明 @springCloud版本:Finchley.SR2
+配置文件说明 重要类  TokenStore
+Token持久化方式【TokenStore-DOC】
+ AccessTokenConverter
+对象持久化转化器【AccessTokenConverter- DOC】
+  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/oauth2/table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/oauth2/table/</guid>
+      <description> OAuth2中的默认数据表 使用Spring Security Oauth2来实现OAuth2标准的授权中有6张默认的表,知道这些表是什么意思很好
+ oauth_access_token oauth_approvals oauth_client_details oauth_client_token oauth_code oauth_refresh_token  oauth_access_token
+   字段 作用 备注     create_time 创建时间,插入的时候自动生成 扩展字段   token_id access_token进行MD5加密后存储    token     authenticatication_id 由username,client_id,scope进行MD5加密生成    user_name 登录的时候用户名    client_id k客户端id    authentication Oauth2Authentication对象序列化后的数据    refresh_token 将refresh_token的值通过MD5加密后存储     </description>
     </item>
     
     <item>
@@ -64,6 +107,15 @@ Spring Security可以对Java Web程序提供安全授权和认证，同时还能
     
     <item>
       <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/redirectjson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/redirectjson/</guid>
+      <description> 前后端分离实现RESTful登录 </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/docs/boot/docs/security/start/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -72,6 +124,24 @@ Spring Security可以对Java Web程序提供安全授权和认证，同时还能
 默认你已经建好了SpringBoot工程。我建立的工程结构如下
 // TODO 工程架构图
 1.引入Security依赖 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-security&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  2.配置WebSecurity文件 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/success2failedhandler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/success2failedhandler/</guid>
+      <description> 自定义成功/失败登录逻辑 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/security/userdetailsservice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/security/userdetailsservice/</guid>
+      <description> 重写UserDetailsService返回自定义的UserDetail </description>
     </item>
     
   </channel>
