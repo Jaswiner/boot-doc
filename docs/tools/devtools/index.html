@@ -7,12 +7,12 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.55.5" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   
-    SpringBoot
+    
+    Devtools
   
  | SpringBoot Doc</title>
 
@@ -24,7 +24,6 @@
 <link rel="icon" href="/docs/boot/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://jaswine.com/docs/boot/index.xml" title="SpringBoot Doc" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -51,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f boot\2f "] {
+  nav ul a[href$="\2f docs\2f boot\2f docs\2ftools\2f devtools\2f "] {
       color: #004ed0;
   }
   </style>
@@ -141,7 +140,8 @@ https://github.com/alex-shpak/hugo-book
   </label>
   <strong>
   
-    SpringBoot
+    
+    Devtools
   
 </strong>
 </header>
@@ -149,88 +149,7 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="springboot">SpringBoot</h1>
-
-<blockquote>
-<p><em>Java开发=Spring开发</em></p>
-</blockquote>
-
-<p>现在的<code>Java</code>开发已经基本上和<code>Spring</code>开发画上等号,现在的<code>Spring</code>开发已经和以前徒手搭建<code>Spring</code>框架不一样，不需要创建<code>xml</code>的配置文件，只要使用<code>SpringBoot</code>就可以简化开发工作，<code>SpringBoot</code>本质上还是<code>Spring</code>，只是帮我做了很多东西。<code>SpringCloud</code>也是使用<code>SpringBoot</code>作为基础来进行开发的，相当于一个脚手架一样的角色。</p>
-
-<h1 id="springboot怎么用">SpringBoot怎么用</h1>
-
-<p>使用<code>SpringBoot</code>分为简单的三步:</p>
-
-<ul>
-<li>1.引入依赖</li>
-<li>2.编写配置</li>
-<li>3.注入bean使用</li>
-</ul>
-
-<h2 id="引入依赖">引入依赖</h2>
-
-<p>在以前，我们使用<code>Spring</code>的时候要引入:</p>
-
-<ul>
-<li>bean</li>
-<li>core</li>
-<li>&hellip;.</li>
-</ul>
-
-<p>等等依赖，手动引入的时候会出现依赖冲突的问题。</p>
-
-<p>使用<code>SpringBoot</code>的时候只要映入一个依赖就可以把所有的依赖引入进来，如:</p>
-
-<pre><code class="language-xml">
-spring-boot-starter-web
-
-</code></pre>
-
-<p>直接就引入了Spring基础组件，Spring-MVC的相关组件</p>
-
-<h2 id="编写配置">编写配置</h2>
-
-<p>SpringBoot帮你写了默认的配置，但是它的配置不符合我们要求的时候我们要进行修改，<code>SpringBoot</code>修改配置有三种方式:</p>
-
-<ul>
-<li>启动时配置</li>
-</ul>
-
-<pre><code class="language-shell">java -jar xxx.jar --spring.profiles.active=PRO
-</code></pre>
-
-<ul>
-<li>修改配置文件</li>
-</ul>
-
-<pre><code class="language-yaml">spring:
-    profiles:
-        active: PRO
-</code></pre>
-
-<ul>
-<li>Java配置</li>
-</ul>
-
-<pre><code class="language-java">@Configuration
-public class MvcConfig{
-
-    @Bean
-    public xxxx xxx(){
-        ...;   
-        return xxx;
-    }
-
-}
-</code></pre>
-
-<h2 id="使用bean">使用Bean</h2>
-
-<pre><code class="language-java">
-@Autowired
-private DataSource dataSource;
-
-</code></pre>
+<h1 id="使用devtools来方便项目开发">使用Devtools来方便项目开发</h1>
 </article>
 
       
@@ -244,13 +163,7 @@ private DataSource dataSource;
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#springboot">SpringBoot</a></li>
-<li><a href="#springboot怎么用">SpringBoot怎么用</a>
-<ul>
-<li><a href="#引入依赖">引入依赖</a></li>
-<li><a href="#编写配置">编写配置</a></li>
-<li><a href="#使用bean">使用Bean</a></li>
-</ul></li>
+<li><a href="#使用devtools来方便项目开发">使用Devtools来方便项目开发</a></li>
 </ul>
 </nav>
   </aside>

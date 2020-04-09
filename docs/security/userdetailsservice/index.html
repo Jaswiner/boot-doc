@@ -56,22 +56,48 @@ https://github.com/alex-shpak/hugo-book
   </style>
 
 <ul>
-<li><p><strong><em>Web应用</em></strong></p></li>
-
-<li><p><strong><em>数据访问</em></strong></p>
+<li><p><strong><span style="color:#FF3E96">Web应用</span></strong></p>
 
 <ul>
-<li><p><strong><em>整合Mybatis Plus</em></strong></p></li>
+<li><p>RESTful风格API</p></li>
 
-<li><p><strong><em>整合Redis</em></strong></p></li>
+<li><p>全局异常处理</p></li>
 
-<li><p><strong><em>整合Elasticsearch</em></strong></p></li>
+<li><p>使用WebFlux</p></li>
 </ul></li>
 
-<li><p><strong><em>安全</em></strong></p>
+<li><p><strong><span style="color:#FF3E96">数据访问(JDBC)</span></strong></p>
 
 <ul>
-<li><p><a href="/docs/boot/docs/security/base/"><strong><em>整合Security</em></strong></a></p>
+<li><p>整合Mybatis</p></li>
+
+<li><p>整合Druid数据库连接池</p></li>
+
+<li><p>整合Mybatis Plus</p></li>
+</ul></li>
+
+<li><p><strong><span style="color:#FF3E96">数据访问(NoSQL)</span></strong></p>
+
+<ul>
+<li><p>整合Redis</p></li>
+
+<li><p>整合MongoDB</p></li>
+
+<li><p>整合Elasticsearch</p></li>
+</ul></li>
+
+<li><p><strong><span style="color:#FF3E96">Actuator</span></strong></p></li>
+
+<li><p><strong><span style="color:#FF3E96">开发者工具</span></strong></p>
+
+<ul>
+<li><a href="#">SpringBoot-Devtools</a></li>
+</ul></li>
+
+<li><p><strong><span style="color:#FF3E96">安全</span></strong></p>
+
+<ul>
+<li><p><a href="/docs/boot/docs/security/base/">整合Security</a></p>
 
 <ul>
 <li><a href="/docs/boot/docs/security/overlooking/">俯瞰Security</a></li>
@@ -90,11 +116,10 @@ https://github.com/alex-shpak/hugo-book
 </ul></li>
 </ul></li>
 
-<li><p><strong><em>其他插件</em></strong></p>
+<li><p><strong><span style="color:#FF3E96">常用插件</span></strong></p>
 
 <ul>
-<li><strong><em>整合Quartz</em></strong></li>
-<li><strong><em>配置Actuator</em></strong></li>
+<li><a href="/docs/boot/docs/quartz/quartz/">整合Quartz</a></li>
 </ul></li>
 </ul>
 
@@ -125,6 +150,29 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="重写userdetailsservice返回自定义的userdetail">重写UserDetailsService返回自定义的UserDetail</h1>
+
+<pre><code class="language-java">	public static LocalDateTime add(LocalDateTime localDateTime, TimeEnum timeEnum, long num) {
+		switch (timeEnum) {
+			case SECOND:
+				return localDateTime.plus(num, ChronoUnit.SECONDS);
+			case MINUTE:
+				return localDateTime.plus(num, ChronoUnit.MINUTES);
+			case DAY:
+				return localDateTime.plus(num, ChronoUnit.DAYS);
+			case HOUR:
+				return localDateTime.plus(num, ChronoUnit.HOURS);
+			case WEEK:
+				return localDateTime.plus(num, ChronoUnit.WEEKS);
+			case MONTH:
+				return localDateTime.plus(num, ChronoUnit.MONTHS);
+			case YEAR:
+				return localDateTime.plus(num, ChronoUnit.YEARS);
+			default:
+				throw new TimeUtilException();
+		}
+
+	}
+</code></pre>
 </article>
 
       

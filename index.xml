@@ -39,6 +39,18 @@
     
     <item>
       <title></title>
+      <link>https://jaswine.com/docs/boot/docs/quartz/quartz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/quartz/quartz/</guid>
+      <description> SpringBoot整合Quartz  SpringBoot@Version:2.1.5.RELEASE Quartz@Version:2.3.1  Quartz是一个作业调度框架，有以下特性:
+ 支持复杂的时间调度 作业可以持久化 支持集群  引入依赖包 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-quartz&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  配置 我们使用Quartz是将任务持久化到数据库中的，Quartz读取数据库中的信息然后定时执行任务。
+SpringBoot配置
+################## # Quartz配置 # ################## spring: quartz: job-store-type: jdbc jdbc: initialize-schema: always schema: classpath:dbscript/quartz_mysql_innodb.sql properties: org: quaretz: scheduler: instanceName: REPORT_TASK instanceId: AUTO jobStore: class: org.quartz.impl.jdbcjobstore.JobStoreTX driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate tablePrefix: QRTZ_ isClustered: true clusterCheckinInterval: 10000 useProperties: false threadPool: class: org.quartz.simpl.SimpleThreadPool threadCount: 10 threadPriority: 5 threadsInheritContextClassLoaderOfInitializingThread: true  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/docs/boot/docs/security/authenticationdecision/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -141,7 +153,16 @@ Spring Security可以对Java Web程序提供安全授权和认证，同时还能
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/docs/boot/docs/security/userdetailsservice/</guid>
-      <description> 重写UserDetailsService返回自定义的UserDetail </description>
+      <description> 重写UserDetailsService返回自定义的UserDetail public static LocalDateTime add(LocalDateTime localDateTime, TimeEnum timeEnum, long num) { switch (timeEnum) { case SECOND: return localDateTime.plus(num, ChronoUnit.SECONDS); case MINUTE: return localDateTime.plus(num, ChronoUnit.MINUTES); case DAY: return localDateTime.plus(num, ChronoUnit.DAYS); case HOUR: return localDateTime.plus(num, ChronoUnit.HOURS); case WEEK: return localDateTime.plus(num, ChronoUnit.WEEKS); case MONTH: return localDateTime.plus(num, ChronoUnit.MONTHS); case YEAR: return localDateTime.plus(num, ChronoUnit.YEARS); default: throw new TimeUtilException(); } }  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/tools/devtools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/tools/devtools/</guid>
+      <description> 使用Devtools来方便项目开发 </description>
     </item>
     
   </channel>
