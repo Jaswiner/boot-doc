@@ -12,6 +12,20 @@
     
     <item>
       <title></title>
+      <link>https://jaswine.com/docs/boot/docs/base/log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/base/log/</guid>
+      <description> SpringBoot日志配置 @SpringBoot版本:2.1.5.RELEASE
+🔗官方文档
+日志级别 日志级别顺序为:
+trace &amp;lt; debug &amp;lt; info &amp;lt; warn &amp;lt;error  SpringBoot配置日志 调整级别(默认Info级别)
+logging: level: org.springframework.bean: trace  输出日志文件
+logging: file: springboot.log # 或者 logging: path: logs/xxx/  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/docs/boot/docs/install/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

@@ -12,7 +12,7 @@
 <title>
   
     
-    Quartz
+    Log
   
  | SpringBoot Doc</title>
 
@@ -50,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f boot\2f docs\2fquartz\2fquartz\2f "] {
+  nav ul a[href$="\2f docs\2f boot\2f docs\2f base\2flog\2f "] {
       color: #004ed0;
   }
   </style>
@@ -141,7 +141,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Quartz
+    Log
   
 </strong>
 </header>
@@ -149,66 +149,40 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="springboot整合quartz">SpringBoot整合Quartz</h1>
+<h1 id="springboot日志配置">SpringBoot日志配置</h1>
 
 <hr />
 
-<ul>
-<li><strong>SpringBoot@Version:</strong>2.1.5.RELEASE</li>
-<li><strong>Quartz@Version:</strong>2.3.1</li>
-</ul>
+<p><strong>@SpringBoot版本:</strong>2.1.5.RELEASE</p>
 
 <hr />
 
-<p><code>Quartz</code>是一个作业调度框架，有以下特性:</p>
+<p><a href="https://docs.spring.io/spring-boot/docs/2.1.5.RELEASE/reference/html/boot-features-logging.html">🔗官方文档</a></p>
 
-<ul>
-<li>支持复杂的时间调度</li>
-<li>作业可以持久化</li>
-<li>支持集群</li>
-</ul>
+<h2 id="日志级别">日志级别</h2>
 
-<h2 id="引入依赖包">引入依赖包</h2>
+<p>日志级别顺序为:</p>
 
-<pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-boot-starter-quartz&lt;/artifactId&gt;
-&lt;/dependency&gt;
+<pre><code>trace &lt; debug &lt; info &lt; warn &lt;error
 </code></pre>
 
-<h2 id="配置">配置</h2>
+<h2 id="springboot配置日志">SpringBoot配置日志</h2>
 
-<p>我们使用<code>Quartz</code>是将任务持久化到数据库中的，<code>Quartz</code>读取数据库中的信息然后定时执行任务。</p>
+<p><strong>调整级别(默认Info级别)</strong></p>
 
-<p><strong>SpringBoot配置</strong></p>
+<pre><code class="language-yaml">logging:
+    level:
+    org.springframework.bean: trace
+</code></pre>
 
-<pre><code class="language-yaml">##################
-#   Quartz配置   #
-##################
-spring:
-  quartz:
-    job-store-type: jdbc
-    jdbc:
-      initialize-schema: always
-      schema: classpath:dbscript/quartz_mysql_innodb.sql
-    properties:
-      org:
-        quaretz:
-          scheduler:
-            instanceName: REPORT_TASK
-            instanceId: AUTO
-          jobStore:
-            class: org.quartz.impl.jdbcjobstore.JobStoreTX
-            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
-            tablePrefix: QRTZ_
-            isClustered: true
-            clusterCheckinInterval: 10000
-            useProperties: false
-          threadPool:
-            class: org.quartz.simpl.SimpleThreadPool
-            threadCount: 10
-            threadPriority: 5
-            threadsInheritContextClassLoaderOfInitializingThread: true
+<p><strong>输出日志文件</strong></p>
+
+<pre><code class="language-yaml">logging:
+    file: springboot.log
+
+# 或者
+logging:
+    path: logs/xxx/
 </code></pre>
 </article>
 
@@ -223,10 +197,10 @@ spring:
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#springboot整合quartz">SpringBoot整合Quartz</a>
+<li><a href="#springboot日志配置">SpringBoot日志配置</a>
 <ul>
-<li><a href="#引入依赖包">引入依赖包</a></li>
-<li><a href="#配置">配置</a></li>
+<li><a href="#日志级别">日志级别</a></li>
+<li><a href="#springboot配置日志">SpringBoot配置日志</a></li>
 </ul></li>
 </ul>
 </nav>
