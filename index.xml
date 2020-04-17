@@ -26,6 +26,18 @@ logging: file: springboot.log # 或者 logging: path: logs/xxx/  </description>
     
     <item>
       <title></title>
+      <link>https://jaswine.com/docs/boot/docs/base/validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/base/validation/</guid>
+      <description> SpringBoot参数校验 @SpringBoot版本:2.1.5.RELEASE
+写代码要对参数/变量进行一下校验，这些校验的逻辑都是相同的，所以可以富用一套代码。
+1.在SpringBoot项目中校验参数 引入依赖 在我们引入spring-boot-starter-web的时候已经自动帮我们引入了validation的组件
+使用 </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/docs/boot/docs/install/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

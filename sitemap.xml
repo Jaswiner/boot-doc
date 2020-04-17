@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/docs/boot/docs/base/validation/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/docs/boot/docs/install/base/</loc>
     <priority>0</priority>
   </url>
