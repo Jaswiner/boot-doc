@@ -28,6 +28,26 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/docs/boot/docs/mvc/config/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/mvc/exception/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/mvc/filterintercept/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/mvc/restful/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/docs/boot/docs/quartz/quartz/</loc>
     <priority>0</priority>
   </url>

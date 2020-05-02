@@ -12,7 +12,7 @@
 <title>
   
     
-    Base
+    Exception
   
  | SpringBoot Doc</title>
 
@@ -50,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f boot\2f docs\2finstall\2f base\2f "] {
+  nav ul a[href$="\2f docs\2f boot\2f docs\2fmvc\2f exception\2f "] {
       color: #004ed0;
   }
   </style>
@@ -144,7 +144,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Base
+    Exception
   
 </strong>
 </header>
@@ -152,7 +152,48 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="redis安装">Redis安装</h1>
+<h1 id="全局异常处理">全局异常处理</h1>
+
+<p>项目中很多时候抛出异常，很多异常都是相同的，如果每一个异常都需要自己去处理的话代码就显得臃肿和重复，<code>SpringBoot</code>提供统一处理异常的方法。</p>
+
+<h2 id="统一异常处理类">统一异常处理类</h2>
+
+<ul>
+<li>新建异常处理类</li>
+<li>加上<code>@ControllerAdvice</code>注解</li>
+<li>编写异常处理方法(加上<code>@ExceptionHandler</code>注解)</li>
+</ul>
+
+<p>这样就可以统一来处理异常了</p>
+
+<p><strong>Example:</strong></p>
+
+<pre><code class="language-java">
+/**
+ * 异常拦截
+ *
+ * @author jaswine
+ */
+@ControllerAdvice
+public class ExceptionAdviceRest {
+
+	@ResponseBody
+	@ExceptionHandler(value = DuplicateKeyException.class)
+	public DTO doubleKeyException(Exception e){
+		return new SimpleRtnDTO(CustomRtnEnum.ERROR.getStatus(),&quot;数据库中已存在&quot;);
+	}
+
+	@ResponseBody
+	@ExceptionHandler(value = Exception.class)
+	public DTO errorHandler(Exception e){
+		e.printStackTrace();
+		return new SimpleRtnDTO(CustomRtnEnum.ERROR.getStatus(),e.getMessage());
+	}
+
+}
+
+
+</code></pre>
 </article>
 
       
@@ -166,7 +207,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#redis安装">Redis安装</a></li>
+<li><a href="#全局异常处理">全局异常处理</a>
+<ul>
+<li><a href="#统一异常处理类">统一异常处理类</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

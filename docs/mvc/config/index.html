@@ -12,7 +12,7 @@
 <title>
   
     
-    Base
+    Config
   
  | SpringBoot Doc</title>
 
@@ -50,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f boot\2f docs\2finstall\2f base\2f "] {
+  nav ul a[href$="\2f docs\2f boot\2f docs\2fmvc\2f config\2f "] {
       color: #004ed0;
   }
   </style>
@@ -144,7 +144,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Base
+    Config
   
 </strong>
 </header>
@@ -152,7 +152,78 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="redis安装">Redis安装</h1>
+<h1 id="web-mvc配置">Web MVC配置</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#web-mvc配置">Web MVC配置</a>
+
+<ul>
+<li><a href="#跨域cors配置">跨域(CORS)配置</a></li>
+<li><a href="#将long型数据转换成string解决前端接受long精度丢失的问题">将Long型数据转换成String，解决前端接受Long精度丢失的问题</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<p>新建配置类实现<a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.html">🔗WebMvcConfigurer接口</a></p>
+
+<h2 id="跨域-cors-配置">跨域(CORS)配置</h2>
+
+<blockquote>
+<p>跨域的原理和解决方案:</p>
+
+<ul>
+<li><a href="https://jaswine.com/blog/posts/cors/">🔗跨域(CORS)的解决办法和原理</a></li>
+</ul>
+</blockquote>
+
+<pre><code class="language-java">@Bean
+public CorsFilter corsFilter() {
+    CorsConfiguration configuration = new CorsConfiguration();
+
+    configuration.addAllowedHeader(&quot;*&quot;);
+    configuration.addAllowedMethod(&quot;*&quot;);
+    configuration.addAllowedOrigin(&quot;*&quot;);
+    configuration.setAllowCredentials(true);
+
+    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+
+    source.registerCorsConfiguration(&quot;/**&quot;, configuration);
+
+    log.info(&quot;配置CORS&quot;);
+    return new CorsFilter(source);
+}
+</code></pre>
+
+<h2 id="将long型数据转换成string-解决前端接受long精度丢失的问题">将Long型数据转换成String，解决前端接受Long精度丢失的问题</h2>
+
+<p>在使用微服务的过程中，数据库中Id是使用<code>雪花算法</code>生成的id，是<code>long</code>的数据，返给前端js接受存在精度丢失的问题。</p>
+
+<pre><code class="language-java">@Override
+public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) {
+    log.info(&quot;配置JSON转换器&quot;);
+    MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+
+
+    // Object和Json转换对象
+    ObjectMapper mapper = new ObjectMapper();
+    // ObjectMapper的Module
+    SimpleModule module = new SimpleModule();
+
+    module.addSerializer(BigInteger.class, ToStringSerializer.instance);
+    module.addSerializer(Long.class, ToStringSerializer.instance);
+    module.addSerializer(Long.TYPE, ToStringSerializer.instance);
+    module.addSerializer(long.class, ToStringSerializer.instance);
+
+    mapper.registerModule(module);
+    converter.setObjectMapper(mapper);
+
+    converters.add(0, converter);
+    //converters.add(new StringHttpMessageConverter(Charset.forName(&quot;UTF-8&quot;)));
+}
+</code></pre>
 </article>
 
       
@@ -166,7 +237,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#redis安装">Redis安装</a></li>
+<li><a href="#web-mvc配置">Web MVC配置</a>
+<ul>
+<li><a href="#跨域-cors-配置">跨域(CORS)配置</a></li>
+<li><a href="#将long型数据转换成string-解决前端接受long精度丢失的问题">将Long型数据转换成String，解决前端接受Long精度丢失的问题</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
