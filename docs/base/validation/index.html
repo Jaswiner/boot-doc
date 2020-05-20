@@ -171,6 +171,29 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="https://cdn.jaswine.com/Web/Tech-Doc/boot/validation.png" alt="validation" /></p>
 
 <h2><span style="color:hotpink">使用</span></h2>
+
+<ul>
+<li><p>1.在参数上加上约束</p>
+
+<pre><code class="language-java">public class User{
+@NotNull(message=&quot;昵称不可为空&quot;)
+private String nickName;
+}
+
+
+</code></pre>
+
+<ul>
+<li>2.加上校验</li>
+</ul>
+
+<pre><code class="language-java">
+void XXX(@Vaild User user){
+...
+}
+
+</code></pre></li>
+</ul>
 </article>
 
       

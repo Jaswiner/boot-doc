@@ -33,7 +33,8 @@ logging: file: springboot.log # 或者 logging: path: logs/xxx/  </description>
       <description> SpringBoot参数校验 @SpringBoot版本:2.1.5.RELEASE
 写代码要对参数/变量进行一下校验，这些校验的逻辑都是相同的，所以可以富用一套代码。
 1.在SpringBoot项目中校验参数 引入依赖 在我们引入spring-boot-starter-web的时候已经自动帮我们引入了validation的组件
-使用 </description>
+使用  1.在参数上加上约束
+public class User{ @NotNull(message=&amp;quot;昵称不可为空&amp;quot;) private String nickName; }   2.加上校验  void XXX(@Vaild User user){ ... }   </description>
     </item>
     
     <item>
