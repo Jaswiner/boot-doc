@@ -66,6 +66,70 @@ public class User{ @NotNull(message=&amp;quot;昵称不可为空&amp;quot;) priv
     
     <item>
       <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/kafka/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/kafka/0menu/</guid>
+      <description> SpringBoot整合kafka </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/rabbitmq/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/rabbitmq/0menu/</guid>
+      <description> SpringBoot整合RabbitMQ  SpringBoot整合RabbitMQ  RabbitMQ配置 RabbitMQ发送消息 RabbitMQ消费信息 RabbitMQ事务   RabbitMQ配置 RabbitMQ发送消息 RabbitMQ消费信息 RabbitMQ事务 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/rabbitmq/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/rabbitmq/config/</guid>
+      <description> RabbitMQ配置  RabbitMQ配置  基础配置 [](#)   基础配置 #Rabbit MQ spring: rabbitmq: host: 127.0.0.1 ## RabbitMQ所在主机 port: 5672 ## RabbitMQ占用端口号 username: guest ## RabbitMQ账号 password: guest ## Rabbit密码 virtual-host: /gateway ## 虚拟主机  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/rabbitmq/get_msg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/rabbitmq/get_msg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/rabbitmq/send_msg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/rabbitmq/send_msg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/rabbitmq/transaction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/rabbitmq/transaction/</guid>
+      <description> RabbitMQ事务  RabbitMQ事务  引言 分布式事务   引言 分布式系统使用消息队列来进行异步解耦，这就带来了分布式事务的问题，Rabbit MQ提供了解决方案。
+分布式事务 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/message/rocketmq/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/message/rocketmq/0menu/</guid>
+      <description> SpringBoot整合RocketMQ </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/docs/boot/docs/mvc/config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -106,6 +170,42 @@ Example:
       <description> RESTful风格API RESTful是一种规范和风格，不是一种技术，如果你的API满足这种风格那就是RESTful风格的API
 关于RESTful的文章可以看这里:
  🔗REST - Roy Thomas博士论文  RESTful成熟度  层级1: 使用HTTP作为网络传输协议 层级2: URL表示资源 层级3: 使用HTTP方法表示行为方式 层级4: 超媒体控制  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/no_sql/elasticsearch/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/no_sql/elasticsearch/0menu/</guid>
+      <description> SpringBoot整合ElasticSearch </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/no_sql/mongodb/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/no_sql/mongodb/0menu/</guid>
+      <description> SpringBoot整合MongoDB </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/no_sql/neo4j/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/no_sql/neo4j/0menu/</guid>
+      <description> SpringBoot整合Neo4j </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/no_sql/redis/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/no_sql/redis/0menu/</guid>
+      <description> SpringBoot整合Redis </description>
     </item>
     
     <item>
@@ -234,6 +334,24 @@ Spring Security可以对Java Web程序提供安全授权和认证，同时还能
       
       <guid>https://jaswine.com/docs/boot/docs/tools/devtools/</guid>
       <description> 使用Devtools来方便项目开发 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/web/webflux/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/web/webflux/0menu/</guid>
+      <description> 使用SpringBoot WebFlux开发Web应用 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/docs/boot/docs/web/webmvc/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/docs/boot/docs/web/webmvc/0menu/</guid>
+      <description> 使用SpringBoot WebMVC开发Web应用 </description>
     </item>
     
   </channel>

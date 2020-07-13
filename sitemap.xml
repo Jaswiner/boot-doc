@@ -28,6 +28,41 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/kafka/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/rabbitmq/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/rabbitmq/config/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/rabbitmq/get_msg/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/rabbitmq/send_msg/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/rabbitmq/transaction/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/message/rocketmq/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/docs/boot/docs/mvc/config/</loc>
     <priority>0</priority>
   </url>
@@ -44,6 +79,26 @@
   
   <url>
     <loc>https://jaswine.com/docs/boot/docs/mvc/restful/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/no_sql/elasticsearch/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/no_sql/mongodb/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/no_sql/neo4j/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/no_sql/redis/0menu/</loc>
     <priority>0</priority>
   </url>
   
@@ -104,6 +159,16 @@
   
   <url>
     <loc>https://jaswine.com/docs/boot/docs/tools/devtools/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/web/webflux/0menu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/docs/boot/docs/web/webmvc/0menu/</loc>
     <priority>0</priority>
   </url>
   
